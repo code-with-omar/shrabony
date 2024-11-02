@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="result"></h2>
+    <script>
+        const result=document.getElementById("result")
+        let num1=prompt("Enter the first number : ")
+        let num2=prompt("Enter the second number : ")
+        let num3=prompt("Enter the third number : ")
+        if(num1>num2 && num1>num3){
+            result.innerText=`First (${num1}) number is largest number`
+        }else if(num2>num1 && num2>num3){
+            result.innerText=`Second (${num2}) number is largest number`
+        }else if(num3>num1 && num3>num2){
+            result.innerText=`Third (${num3}) number is largest number`
+        }else{
+            result.innerText="All numbers are same"
+        }
+    </script>
+</body>
+</html>

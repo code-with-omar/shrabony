@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day and Date </title>
+</head>
+
+<body>
+    <h2 id="day"></h2>
+    <p id="time"> <span></span></p>
+
+    <script>
+        const day = document.getElementById("day");
+        const time = document.getElementById("time");
+        const timeAndDate = new Date();
+        const todayIs = timeAndDate.getDay();
+        const timeNow = timeAndDate.getHours();
+
+        let nameOfToday = "";
+        switch (todayIs) {
+            case 0:
+                nameOfToday = "Sunday";
+                break;
+            case 1:
+                nameOfToday = "Monday";
+                break;
+            case 2:
+                nameOfToday = "Tuesday";
+                break;
+            case 3:
+                nameOfToday = "Wednesday";
+                break;
+            case 4:
+                nameOfToday = "Thursday";
+                break;
+            case 5:
+                nameOfToday = "Friday";
+                break;
+            case 6:
+                nameOfToday = "Saturday";
+                break;
+        }
+
+        day.innerText = `Today is ${nameOfToday}`;
+
+        const timeSuffix = timeNow >= 12 ? "PM" : "AM";
+        const displayHour = timeNow % 12 || 12;
+
+        time.innerText = `The current time is ${displayHour} ${timeSuffix} : ${timeNow - 6}:00`;
+    </script>
+</body>
+
+</html>

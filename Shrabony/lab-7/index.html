@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link to external stylesheet -->
+</head>
+
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="handleSubmit(event)">
+        <label>User Name: <input type="text" name="userName" required></label>
+        <label>Father's Name: <input type="text" name="fatherName" required></label>
+        <label>Mother's Name: <input type="text" name="motherName" required></label>
+        <label>Date of Birth: <input type="date" name="dateOfBirth" required></label>
+
+        <label>Gender:</label>
+        <label><input type="radio" name="gender" value="male" required> Male</label>
+        <label><input type="radio" name="gender" value="female" required> Female</label>
+        <label><input type="radio" name="gender" value="other" required> Other</label>
+
+        <label>Email: <input type="email" name="email" required></label>
+        <label>Address: <textarea name="address" rows="4" required></textarea></label>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>

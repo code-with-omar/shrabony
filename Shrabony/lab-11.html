@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+
+<body>
+    First Number: <input type="text" id="firstNumber"><br><br>
+    Second Number: <input type="text" id="secondNumber"><br><br>
+    <button onclick="multiply()">Multiply</button>
+    <button onclick="divide()">Division</button>
+    <p id="result"></p>
+
+    <script>
+        let result = document.getElementById("result");
+        function multiply() {
+            const firstNumber = parseFloat(document.getElementById("firstNumber").value);
+            const secondNumber = parseFloat(document.getElementById("secondNumber").value);
+            result.innerText = `Result: ${firstNumber * secondNumber}`;
+        }
+        function divide() {
+            const firstNumber = parseFloat(document.getElementById("firstNumber").value);
+            const secondNumber = parseFloat(document.getElementById("secondNumber").value);
+            if (secondNumber !== 0) {
+                result.innerText = `Result: ${firstNumber / secondNumber}`;
+            } else {
+                result.innerText = "Cannot divide by zero";
+            }
+        }
+    </script>
+</body>
+
+</html>
